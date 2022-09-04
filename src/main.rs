@@ -1,15 +1,11 @@
-use crate::event::{
-  event::Event,
-  event_init::EventInit,
-};
+use crate::event::event::Event;
 
 mod event;
 
 fn main() {
-  let mut ev = Event::new("test", EventInit::new());
+  let mut ev = Event::new("test", None);
 
-  ev.stop_propagation();
-  ev.stop_immediate_propagation();
+  ev.return_value(None);
 
   println!("Hello, world!");
 }
