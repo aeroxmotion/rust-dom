@@ -1,6 +1,7 @@
-use crate::event::event::Event;
+use crate::event::{event::Event, event_traits::IEvent};
 
 mod event;
+mod webidl;
 
 fn main() {
   let mut ev = Event::new("test", None);
